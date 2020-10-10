@@ -1,19 +1,17 @@
+<h1 class="mb-5">Add a Restaurant</h1>
+
 <%= form_for(@restaurant) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-  <%= f.label :rating %>
-  <%= f.number_field :rating %>
-  <%= f.submit %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :address %>
+    <%= f.text_field :address, class: "form-control" %>
+  </div>
+  <div class="form-group">
+   <%= f.label :rating %>
+   <%= f.number_field :rating, class: "form-control" %>
+  </div>
+  <%= f.submit "Create Restaurant", class: "btn btn-primary mt-3 mb-5" %>
 <% end %>
-<form class="new_restaurant" id="new_restaurant" action="/restaurants" accept-charset="UTF-8" method="post">
-  <input type="hidden" name="authenticity_token" value="fUrBymmVzFG49YTQE9xKfohttEtW7eHnui2WT6KWpRXT6g9dz73lhZ7bRdHH+RuV/TFoB23OG5l1eo731o8l6g==">
-  <label for="restaurant_name">Name</label>
-  <input type="text" name="restaurant[name]" id="restaurant_name">
-  <label for="restaurant_address">Address</label>
-  <input type="text" name="restaurant[address]" id="restaurant_address">
-  <label for="restaurant_rating">Rating</label>
-  <input type="number" name="restaurant[rating]" id="restaurant_rating">
-  <input type="submit" name="commit" value="Create Restaurant" data-disable-with="Create Restaurant">
-</form>

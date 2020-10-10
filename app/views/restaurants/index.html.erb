@@ -1,5 +1,13 @@
 <h1>All Restaurants</h1>
+<div class="mt-5 d-flex flex-row justify-content-between flex-wrap">
   <% @restaurants.each do |restaurant| %>
-    <h3><%= restaurant.name %> <%= '⭐' * restaurant.rating %></h3>
-    <p><%= restaurant.address %></p>
+    <div class="card mt-2 mb-2" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= restaurant.name %></h5>
+        <h6 class="card-subtitle mb-2"><%= '⭐' * restaurant.rating %></h6>
+        <p class="card-text"><%= restaurant.address %></p>
+      </div>
+    </div>
   <% end %>
+</div>
+
